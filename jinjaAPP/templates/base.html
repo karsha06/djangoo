@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} my web{% endblock %}}</title>
+</head>
+<body>
+<header>
+<h1>{% block header %}welcome to emobilis{% endblock %}</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="{% url 'my_home' %}">home</a></li>
+        <li><a href="{% url 'my_about' %}">about</a></li>
+        <li><a href="{% url 'my_contact' %}">contact</a></li>
+         <li><a href="{% url 'my_gallery' %}">gallery</a></li>
+
+
+    </ul>
+</nav>
+<main>
+    {% block content %} {% endblock %}
+</main>
+<footer>
+    <p>&copy; 2024 emobilis</p>
+</footer>
+
+</body>
+</html>
